@@ -1,0 +1,12 @@
+.bg-image{
+background-image: url('../../../assets/images/more/15.jpg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+max-height: 120px;
+height: 20vh;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
