@@ -7,3 +7,7 @@
 * {
   font-family: 'Rancho', cursive;
 }
+
+.hover-banner-btn{
+  @apply  transition-all duration-500 hover:border-white hover:text-white
+}
