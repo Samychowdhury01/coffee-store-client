@@ -16,23 +16,23 @@ const Banner = () => {
         <div>
         </div>
             </div>
-            <div className='bg-[#ECEAE3] py-14 px-10 flex justify-center gap-10'>
-        <div>
+            <div className='bg-[#ECEAE3] py-14 px-10 md:flex justify-center gap-10'>
+        <div className='mb-5'>
             <img src={icon1} alt="icon"/>
             <h4 className='mt-4 mb-2 text-4xl'>Awesome Aroma</h4>
             <p>You will definitely be a fan of the design & aroma of your coffee</p>
         </div>
-        <div>
+        <div className='mb-5'>
             <img src={icon2} alt="icon" />
             <h4 className='mt-4 mb-2 text-4xl'>High Quality</h4>
             <p>We served the coffee to you maintaining the best quality</p>
         </div>
-        <div>
+        <div className='mb-5'>
             <img src={icon3} alt="icon" />
             <h4 className='mt-4 mb-2 text-4xl'>Pure Grades</h4>
             <p>The coffee is made of the green coffee beans which you will love</p>
         </div>
-        <div>
+        <div className='mb-5'>
             <img src={icon4} alt="icon" />
             <h4 className='mt-4 mb-2 text-4xl'>Proper Roasting</h4>
             <p>Your coffee is brewed by first roasting the green coffee beans</p>

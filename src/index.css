@@ -5,9 +5,17 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap'); */
 
 * {
-  font-family: 'Rancho', cursive;
+  font-family: "Rancho", cursive;
 }
 
-.hover-banner-btn{
-  @apply  transition-all duration-500 hover:border-white hover:text-white
+.hover-banner-btn {
+  @apply transition-all duration-500 hover:border-white hover:text-white;
+}
+
+.outlet-background {
+  background-image: url("./assets/images/more/11.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
