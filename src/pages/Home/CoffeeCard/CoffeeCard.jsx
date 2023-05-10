@@ -15,7 +15,7 @@ const CoffeeCard = ({coffee, coffees,}) => {
                 <p><span className="font-bold mr-2">Taste:</span> {taste}</p>
             </div>
             <div>
-                <Link to='' >
+                <Link to={`/coffee/coffee-details/${_id}`} >
                 <p className="w-10 bg-[#D2B48C] text-white p-3 rounded-md mb-4"><FaEye/></p>
                 </Link>
                 <Link to=''>
