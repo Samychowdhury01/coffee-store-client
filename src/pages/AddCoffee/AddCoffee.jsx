@@ -1,5 +1,41 @@
+import Swal from "sweetalert2";
 
 const AddCoffee = () => {
+
+    const handleAddCoffee = (event) =>{
+        event.preventDefault()
+        const form = event.target
+        const name = form.name.value
+        const chef = form.chef.value
+        const supplier = form.supplier.value
+        const taste = form.taste.value
+        const category = form.category.value
+        const details = form.details.value
+        const photo = form.photo.value
+        
+        const newCoffee = {name, chef, supplier, taste, category, details, photo}
+       
+        fetch('http://localhost:5000/coffee', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(newCoffee)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Coffee Added Successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+                  form.reset()
+            }
+        })
+    }
 
         return (
             <div className='p-5 md:p-14'>
@@ -8,7 +44,7 @@ const AddCoffee = () => {
                 <h2 className="text-3xl font-extrabold text-[#374151] mb-8">Add New Coffee</h2>
                 <p className=' mb-8'>It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
                 </div>
-                <form>
+                <form onSubmit={handleAddCoffee}>
                     {/* form name and quantity row */}
                     <div className="md:flex mb-8">
                         <div className="form-control md:w-1/2">
@@ -24,7 +60,7 @@ const AddCoffee = () => {
                                 <span className="label-text">Chef</span>
                             </label>
                             <label className="input-group">
-                                <input type="text" name="quantity" placeholder="Enter coffee chef" className="input input-bordered w-full" />
+                                <input type="text" name="chef" placeholder="Enter coffee chef" className="input input-bordered w-full" />
                             </label>
                         </div>
                     </div>
