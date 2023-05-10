@@ -29,12 +29,13 @@ const Home = () => {
           </button>
           </Link>
         </div>
-        <div className="grid grid-cols-2 gap-6 mt-12 container mx-auto p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 container mx-auto p-10">
     {
       coffees.map(coffee => <CoffeeCard
       key={coffee?._id}
       coffee={coffee}
       coffees={coffees}
+      setCoffees={setCoffees}
       >
       </CoffeeCard>)
     }
